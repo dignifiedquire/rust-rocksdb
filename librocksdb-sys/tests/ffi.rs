@@ -25,7 +25,7 @@
 
 use const_cstr::const_cstr;
 use libc::*;
-use librocksdb_sys::*;
+use librocksdb_sys::ffi::rocksdb::*;
 use std::borrow::Cow;
 use std::env;
 use std::ffi::{CStr, CString};
@@ -119,7 +119,7 @@ unsafe fn Free<T>(ptr: *mut *mut T) {
 }
 
 unsafe fn CheckGet(
-    mut db: *mut rocksdb_t,
+    mut db: DB,
     options: *mut rocksdb_readoptions_t,
     key: *const c_char,
     expected: *const c_char,

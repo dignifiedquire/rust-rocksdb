@@ -107,7 +107,6 @@ db/db_info_dumper.cc
 db/external_sst_file_ingestion_job.cc
 db/trim_history_scheduler.cc
 db/version_builder.cc
-db/c.cc
 db/repair.cc
 db/version_set.cc
 db/version_edit.cc
